@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-        <meta https-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,
-        initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css" />
-    </head>
-    <body>
-        <div class="login-box">
-            <form action="dashboard.html">
-                <h2>Login</h2>
-                <div class="input-box">
-                    <span class="icon"><ion-icon 
-                    name="person-circle"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Username</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name=
-                    "lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Password</label>
-                    </div>
-                    <button type="submit">Login</button>
-            </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Bubble animation background -->
+    <ul class="bubbles"></ul>
+
+    <!-- Particle.js background -->
+    <div id="particles-js"></div>
+
+    <!-- Login form -->
+    <div class="login-box">
+      <form action="#" method="post">
+        <h2>Login</h2>
+
+        <div class="input-box">
+          <span class="icon"><i class="fas fa-user"></i></span>
+          <input type="text" name="username" required />
+          <label>Username</label>
         </div>
 
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    </body>
+        <div class="input-box">
+          <span class="icon"><i class="fas fa-lock"></i></span>
+          <input type="password" name="password" required />
+          <label>Password</label>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="register-link">
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Particle.js script -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      // Particle.js config
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 3 },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: { enable: true, speed: 3 },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
 </html>
