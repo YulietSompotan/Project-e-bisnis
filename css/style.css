@@ -91,18 +91,22 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("img/produk.png");
   justify-content: center;
   background-color: var(--bg);
   padding: 0 7%;
 }
 
 .hero::after {
-  coontent: "";
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
-  height: 100;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgb(151, 100, 132) 3%,
+    rgba(24, 4, 4, 0) 25%
+  );
 }
 
 .hero__content {
@@ -111,19 +115,64 @@ body {
   justify-content: space-between;
   gap: 2rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 60rem;
 }
 
-.hero .content {
+.hero .content h1 {
   flex: 1;
-  color: #36287d;
+  font-size: 5em;
+  color: #972c70;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.5;
+  background-color: rgba(151, 74, 116, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+.hero .content h1 span {
+  color: var(--primary-color);
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.hero .content h1:hover {
+  background-color: rgba(80, 64, 78, 0.2);
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(151, 74, 116, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(151, 74, 116, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(151, 74, 116, 0.5);
+  }
+}
+
+.hero .content p {
+  font-size: 1.3rem;
+  color: #972c70;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
 .hero .image {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  position: relative;
+  transform: translateY(-80px);
 }
 
 .hero .image img {
@@ -139,8 +188,94 @@ body {
   color: #fff;
   background-color: var(--primary-color);
   border-radius: 0.5rem;
-  box-shadow: 1px 1px 2px rgba(1, 1, 3, 0.5);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.hero .content .cta:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* About Section */
+.about,
+.review {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.reviews h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span, 
+.reviews h2 span {
+  color: var(--primary-color);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+
+.about-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem; /* Jarak antar gambar */
+  justify-content: center; /* Opsional: rata tengah */
+  margin-bottom: 2rem;
+}
+
+.about-img img {
+  width: 100%; /* Sesuaikan dengan ukuran yang kamu mau */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px; /* Opsional: sudut membulat */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional: bayangan */
+}
+
+.about-img::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/* Reviews */
+
+
 
 /* Media Queries */
 
@@ -156,6 +291,66 @@ body {
   html {
     font-size: 62.5%;
   }
+}
+
+.about .row {
+  display: flex;
+  flex-direction: row; /* Ubah dari default 'row' */
+  align-items: center;     /* Supaya konten rata tengah */
+  gap: 2rem;               /* Jarak antar bagian */
+}
+
+
+.about .row .about-img img {
+  height: 24rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about .row .content {
+  padding: 0;
+}
+
+.about .row .content h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.about .row .content p {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.about .row {
+  display: flex;
+  flex-direction: column; /* Ubah dari default 'row' */
+  align-items: center;     /* Supaya konten rata tengah */
+  gap: 2rem;               /* Jarak antar bagian */
+}
+
+
+.about .row .about-img img {
+  height: 24rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about .row .content {
+  padding: 0;
+}
+
+.about .row .content h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.about .row .content p {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 1.6;
 }
 
 /* Mobile Phone */
