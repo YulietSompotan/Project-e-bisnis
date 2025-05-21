@@ -10,17 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
 
     <!-- feather icons-->
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- my style -->
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <script src="js/script.js"></script>
-  <body>
+    </head>
+    <script src="js/script.js"></script>
+    <body>
     <!-- navbar start -->
     <nav class="navbar">
       <a href="#" class="navbar-logo">YAM<span>JELLYJOY</span></a>
@@ -37,12 +36,13 @@
       <div class="navbar-extra">
         <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
       </div>
-    <!-- Search Form Start -->
-    <div class="search-form">
-      <input type="search" id="search-box" placeholder="search-here">
-      <label for="search-box"><i data-feather="search"></i></label>
-    </div>
-    <!-- Search Form End -->
+
+      <!-- Search Form Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search-here">
+        <label for="search-box"><i data-feather="search"></i></label>
+      </div>
+      <!-- Search Form End -->
     </nav>
     <!-- navbar end -->
 
@@ -65,45 +65,40 @@
 
       <div class="row">
         <div class="content">
-        <h3>YAM JellyJoy is the fruit of an inspiring academic journey in the entrepreneurship course. 
-          This course not only provided theoretical knowledge about business and management, but also motivated us to realize our creative ideas into a real venture. 
+        <h3>YAM JELLYJOY is the fruit of an inspiring academic journey in the entrepreneurship course. This course not only provided theoretical knowledge about business and management, but also motivated us to realize our creative ideas into a real venture. 
           With the guidance of experienced lecturers and the collaborative spirit among fellow students, we decided to start a small business focusing on innovative products that are refreshing and healthy.</h3>
         <hr class="section-divider">
 
-        <div class="content">
-        <h3>Kenapa YAM JELLY JOYYYYYYY?</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae dolore corporis, ducimus vel inventore nihil?</p>
-        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam illo sit minus incidunt eos illum ea. Aspernatur expedita vel debitis?</p>
         <div class="about-img">
           <div>
         <img src="img/adel.jpg" alt="Adelia Langitan">
-        <p>Nama: Adelia Langitan</p>
-        <p>NIM: 220211060002</p>
+        <p>Adelia Langitan</p>
+        <p>220211060002</p>
           </div>
           <div>
         <img src="img/angii.jpg" alt="Anggraini Sumarno">
-        <p>Nama: Anggraini Sumarno</p>
-        <p>NIM: 2202110600</p>
+        <p>Anggraini Sumarno</p>
+        <p>2202110600</p>
           </div>
           <div>
         <img src="img/berNadyaa.jpg" alt="Nadya Tangkere">
-        <p>Nama: Nadya Tangkere</p>
-        <p>NIM: 2202110600</p>
+        <p>Nadya Tangkere</p>
+        <p>2202110600</p>
           </div>
           <div>
         <img src="img/tesa.jpg" alt="Yuliet Sompotan">
-        <p>Nama: Yuliet Sompotan</p>
-        <p>NIM: 220211060048</p>
+        <p>Yuliet Sompotan</p>
+        <p>220211060048</p>
           </div>
       </div>
         </div>
     </section>
     <!-- About Section End-->
 
-    <!-- review Section start -->
+    <!-- Review Section start -->
     <section id="review" class="review">
       <h2><span>Best </span>Reviews</h2>
-      <p>what our customers says</p>
+      <p>What our customers says..</p>
 
       <!-- review card -->
       <div class="review-card">
@@ -162,95 +157,75 @@
       </div>
       </section>
 
-    <!-- review Section end -->
-     <!--==================== RECENTLY ====================-->
-     <section class="recently section" id="recently">
-      <div class="recently__container container grid">
-          <div class="recently__data">
-              <span class="section__subtitle">Recently Added</span>
-              <h2 class="section__title">
-                  Jelly Ball<br>
-                  Soup
-              </h2>
+    <!-- Review Section End -->
 
-              <p class="recently__description">
-              Feel the freshness and deliciousness in every bite. 
-              Hurry up and enjoy the sweet and fresh sensation of our Soup Jelly Ball!
-              </p>
+   <!-- Recently Section start -->
+<section class="recently section" id="recently">
+  <div class="recently__container container grid">
+    <div class="recently__data">
+      <span class="section__subtitle">Recently Added</span>
+      <h2 class="section__title"> Jelly Ball Soup </h2>
 
-              <a href="shop.php" class="button">
-                  Order Now <i class="ri-arrow-right-line"></i>
-              </a>
+      <p class="recently__description">
+        Feel the freshness and deliciousness in every bite. 
+        Hurry up and enjoy the sweet and fresh sensation of our Soup Jelly Ball!
+      </p>
 
-              <img src="landing page/assets/buah naga.png" alt="recently image" class="recently__data-img">
-          </div>
+      <a href="shop.php" class="button-recently">
+        Order Now <i class="ri-arrow-right-line"></i>
+      </a>
+    </div>
 
-          <div class="bottom-data">
-          <div class="orders">
-<div class="orders__header">
-  <i class='bx bx-receipt'></i>
-  <h3>Recent Orders</h3>
-  <i class='bx bx-filter'></i>
-  <i class='bx bx-search'></i>
-</div>
-<table>
-  <thead>
-      <tr>
-          <th>User</th>
-          <th>Order Date</th>
-          <th>Status</th>
-          <th>Quantity</th>
-      </tr>
-  </thead>
-  <tbody>
-      <?php
-      foreach ($orders as $order):
-      ?>
-      <tr>
-          <td><p><?php echo htmlspecialchars($order['customer_name']); ?></p></td>
-          <td><?php echo htmlspecialchars($order['order_date']); ?></td>
-          <td><span class="status <?php echo strtolower(htmlspecialchars($order['status'])); ?>"><?php echo htmlspecialchars($order['status']); ?></span></td>
-          <td><?php echo htmlspecialchars($order['quantity']); ?></td>
-      </tr>
-      <?php endforeach; ?>
-  </tbody>
-</table>
-<a class="button__recently">
-  Tersisa ... 
-</a>
-</div>
+    <div class="bottom-data">
+      <div class="orders">
+        <div class="orders__header">
+          <i class='bx bx-receipt'></i>
+          <h3>Recent Orders</h3>
+          <i class='bx bx-filter'></i>
+          <i class='bx bx-search'></i>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Order Date</th>
+              <th>Status</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+          Tersisa ...
+        </a>
       </div>
-      </div>
-  </section>
-</main>
+    </div>
+  </div>
+</section>
+    <!-- Recently Section end -->
 
     <!-- Contact Section start -->
-     <section id="contact" class="contact">
-       <h2><span>Contact</span> Us</h2>
+<section id="contactUs" class="contact">
+  <h2><span>Contact</span> Us</h2>
 
-     
-      <div class="row">
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.2828069031051!2d124.83194474160709!3d1.4589516265389022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287752f0c88160f%3A0xb9cbf1672d5082fc!2sAily%20home!5e0!3m2!1sid!2sid!4v1747721999968!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-      
-          <form action="">
-            <div class="input-group">
-              <i data-feather="user"></i>
-              <input type="text" placeholder="Nama">
-            </div>
-          <form action="">
-            <div class="input-group">
-              <i data-feather="mail"></i>
-              <input type="text" placeholder="Email">
-          <form action="">
-            <div class="input-group">
-              <i data-feather="phone"></i>
-              <input type="text" placeholder="No hp">
-            </div>
-            <button type="submit" class="btn">kirim pesan</button>
-          </form>
+  <div class="row">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=..." 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade" 
+      class="map">
+    </iframe>
 
-        </div>
-    </section>
+    <form action="" class="form">
+      <input type="text" placeholder="Nama" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="No HP" required>
+      <button type="submit" class="btn">Kirim</button>
+    </form>
+  </div>
+</section>
+
     <!-- Contact Section end -->
     
 
