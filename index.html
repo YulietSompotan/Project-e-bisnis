@@ -19,7 +19,7 @@
     <!-- my style -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
+  <script src="js/script.js"></script>
   <body>
     <!-- navbar start -->
     <nav class="navbar">
@@ -28,15 +28,21 @@
       <div class="navbar-nav">
         <a href="#home">Home</a>
         <a href="#about">About Us</a>
-        <a href="#review">Reviews</a>
+        <a href="#review">Review</a>
         <a href="#recently">Recently</a>
-        <a href="login.php">Login as Admin</a>
+        <a href="#contactUs">Contact Us</a>
+        <a href="login.html">Login as Admin</a>
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
         <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
       </div>
+    <!-- Search Form Start -->
+    <div class="search-form">
+      <input type="search" id="search-box" placeholder="search-here">
+      <label for="search-box"><i data-feather="search"></i></label>
+    </div>
+    <!-- Search Form End -->
     </nav>
     <!-- navbar end -->
 
@@ -59,40 +65,169 @@
 
       <div class="row">
         <div class="content">
+        <h3>YAM JellyJoy is the fruit of an inspiring academic journey in the entrepreneurship course. 
+          This course not only provided theoretical knowledge about business and management, but also motivated us to realize our creative ideas into a real venture. 
+          With the guidance of experienced lecturers and the collaborative spirit among fellow students, we decided to start a small business focusing on innovative products that are refreshing and healthy.</h3>
+        <hr class="section-divider">
+
+        <div class="content">
         <h3>Kenapa YAM JELLY JOYYYYYYY?</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae dolore corporis, ducimus vel inventore nihil?</p>
         <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam illo sit minus incidunt eos illum ea. Aspernatur expedita vel debitis?</p>
         <div class="about-img">
-            <img src="img/adel.jpg" alt="About Us">
-            <img src="img/angii.jpg" alt="Image 2">
-            <img src="img/berNadyaa.jpg" alt="Image 3">
-            <img src="img/tesa.jpg" alt="Image 4">
+          <div>
+        <img src="img/adel.jpg" alt="Adelia Langitan">
+        <p>Nama: Adelia Langitan</p>
+        <p>NIM: 220211060002</p>
           </div>
+          <div>
+        <img src="img/angii.jpg" alt="Anggraini Sumarno">
+        <p>Nama: Anggraini Sumarno</p>
+        <p>NIM: 2202110600</p>
+          </div>
+          <div>
+        <img src="img/berNadyaa.jpg" alt="Nadya Tangkere">
+        <p>Nama: Nadya Tangkere</p>
+        <p>NIM: 2202110600</p>
+          </div>
+          <div>
+        <img src="img/tesa.jpg" alt="Yuliet Sompotan">
+        <p>Nama: Yuliet Sompotan</p>
+        <p>NIM: 220211060048</p>
+          </div>
+      </div>
         </div>
     </section>
     <!-- About Section End-->
 
-    <!-- Menu Section start -->
-    <section id="menu" class="menu">
-      <h2><span>Menu</span> Kami</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nobis dolorem, eveniet tempore asperiores quod!.</p>
+    <!-- review Section start -->
+    <section id="review" class="review">
+      <h2><span>Best </span>Reviews</h2>
+      <p>what our customers says</p>
 
-      <div class="row">
-        <div class="menu-card">
-          <img src="img/menu.png" 
-          alt="YAM JELLY JOY" class="menu-card-img"
-          <h3 class="menu-card-title">- YAM JELLY JOY -</h3>
-          <p class="menu-card-price">IDR 15K</p>
+      <!-- review card -->
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Jun</span>
+          <span class="review-date">May 16, 2025</span>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <div class="review-text">
+          The jelly balls are so tasty, I can't get enough of them!
         </div>
       </div>
-    </section>
 
-    <!-- Menu Section end -->
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Aurora</span>
+          <span class="review-date">May 16, 2025</span>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <div class="review-text">
+          Great service and delicious food!
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Charlie</span>
+          <span class="review-date">May 16, 2025</span>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <div class="review-text">
+          Love the jelly balls! Will order again.
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Varel</span>
+          <span class="review-date">May 16, 2025</span>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <div class="review-text">
+          Best jelly soup in town!
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <span class="review-name">Ryu</span>
+          <span class="review-date">May 16, 2025</span>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <div class="review-text">
+          Quick delivery and tasty food.
+        </div>
+      </div>
+      </section>
+
+    <!-- review Section end -->
+     <!--==================== RECENTLY ====================-->
+     <section class="recently section" id="recently">
+      <div class="recently__container container grid">
+          <div class="recently__data">
+              <span class="section__subtitle">Recently Added</span>
+              <h2 class="section__title">
+                  Jelly Ball<br>
+                  Soup
+              </h2>
+
+              <p class="recently__description">
+              Feel the freshness and deliciousness in every bite. 
+              Hurry up and enjoy the sweet and fresh sensation of our Soup Jelly Ball!
+              </p>
+
+              <a href="shop.php" class="button">
+                  Order Now <i class="ri-arrow-right-line"></i>
+              </a>
+
+              <img src="landing page/assets/buah naga.png" alt="recently image" class="recently__data-img">
+          </div>
+
+          <div class="bottom-data">
+          <div class="orders">
+<div class="orders__header">
+  <i class='bx bx-receipt'></i>
+  <h3>Recent Orders</h3>
+  <i class='bx bx-filter'></i>
+  <i class='bx bx-search'></i>
+</div>
+<table>
+  <thead>
+      <tr>
+          <th>User</th>
+          <th>Order Date</th>
+          <th>Status</th>
+          <th>Quantity</th>
+      </tr>
+  </thead>
+  <tbody>
+      <?php
+      foreach ($orders as $order):
+      ?>
+      <tr>
+          <td><p><?php echo htmlspecialchars($order['customer_name']); ?></p></td>
+          <td><?php echo htmlspecialchars($order['order_date']); ?></td>
+          <td><span class="status <?php echo strtolower(htmlspecialchars($order['status'])); ?>"><?php echo htmlspecialchars($order['status']); ?></span></td>
+          <td><?php echo htmlspecialchars($order['quantity']); ?></td>
+      </tr>
+      <?php endforeach; ?>
+  </tbody>
+</table>
+<a class="button__recently">
+  Tersisa ... 
+</a>
+</div>
+      </div>
+      </div>
+  </section>
+</main>
 
     <!-- Contact Section start -->
      <section id="contact" class="contact">
        <h2><span>Contact</span> Us</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, sed.</p>
+
      
       <div class="row">
          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.2828069031051!2d124.83194474160709!3d1.4589516265389022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287752f0c88160f%3A0xb9cbf1672d5082fc!2sAily%20home!5e0!3m2!1sid!2sid!4v1747721999968!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
@@ -117,19 +252,7 @@
         </div>
     </section>
     <!-- Contact Section end -->
-
- <!-- Review Section start-->
-  <section id="Review" class="review">
-    <h2><span>Review</span>Pelanggan</h2>
-    <p> TERSERAH</p>
-
-
-    <!-- Review Section Start-->
-    <section id="menu" class="menu">
-      <h2><span>Review</span>Pelanggan</h2>
-    </section>
-    <!-- Review Section End-->
-
+    
 
     <!-- Footer start -->
      <footer>
@@ -138,15 +261,16 @@
       </div>
 
       <div class="links">
-        <a href="#Home">Home</a>
-        <a href="#About Us">About Us</a>
-        <a href="#Menu">Menu</a>
-        <a href="#Contact Us">Contact Us</a>
-        <a href="#Review Pelanggan">Review Pelanggan</a>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#review">Review</a>
+        <a href="#recently">Recently</a>
+        <a href="#contactUs">Contact Us</a>
+        <a href="login.html">Login as Admin</a>
       </div>
 
       <div class="credit">
-        <p>Created by <a href="">4 Wonder Women</a>. | &copy; 2025.</p>
+        <p>&copy; YAM JELLYJOY | All rights reserved</p>
       </div>
      </footer>
     <!-- Footer end -->
