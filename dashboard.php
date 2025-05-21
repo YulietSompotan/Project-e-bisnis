@@ -137,7 +137,7 @@ if(!isset($_SESSION['session_username'])){
                                         <td>Hana</td>
                                         <td>2</td>
                                         <td>
-                                            <span class="status"></span>
+                                            <span class="status purple"></span>
                                             On progress
                                         </td>
                                     </tr>
@@ -146,7 +146,7 @@ if(!isset($_SESSION['session_username'])){
                                         <td>Brian</td>
                                         <td>5</td>
                                         <td>
-                                            <span class="status"></span>
+                                            <span class="status pink"></span>
                                             Done
                                         </td>
                                     </tr>
@@ -155,7 +155,7 @@ if(!isset($_SESSION['session_username'])){
                                         <td>Injil</td>
                                         <td>10</td>
                                         <td>
-                                            <span class="status"></span>
+                                            <span class="status orange"></span>
                                             Done
                                         </td>
                                     </tr>
