@@ -1,13 +1,13 @@
 <?php
 session_start();
-// atur koneksi ke database
+// koneksi ke database
 $host_db = "localhost";
 $usen_db = "root";
 $pass_db = "";
 $nama_db = "ebisnis";
 $koneksi = mysqli_connect($host_db, $usen_db, $pass_db, $nama_db);
 
-//atur variabel
+//variabel
 $err ="";
 $username = "";
 $ingataku = "";
@@ -17,15 +17,15 @@ if(isset($_POST['login'])){
     $password = $_POST['password'];
     $ingataku = $_POST['ingataku'] ?? null;
 
-    if($username == '' or $password == ''){
-        $err .="<li>Silakan masukan username dan password</li>";
+    if($username == '' || $password == ''){
+        $err .= "<li>Please enter your username and password.</li>";
     }else{
         $sql1 = "select * from user where username = '$username'";
         $q1 = mysqli_query($koneksi, $sql1);
         $r1 = mysqli_fetch_array($q1);
 
         if (!$r1) {
-    $err .= "<li>Username <b>$username</b> tidak terdaftar</li>";
+    $err .= "<li>Username <b>$username</b> is not registered</li>";
 } elseif ($r1['password'] != md5($password)) {
     $err .= "<li>Password salah.</li>";
 }
@@ -67,25 +67,58 @@ if(isset($_POST['login'])){
          <?php if($err){ echo "<ul style='color:red;'>$err</ul>"; } ?>
 
             <form method="POST" action="login.php">
-    <h2>Login</h2>
-    <div class="input-box">
-        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
-        <input type="text" name="username" required>
-        <label>Username</label>
-    </div>
-    <div class="input-box">
-        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-        <input type="password" name="password" required>
-        <label>Password</label>
-    </div>
-    <div class="remember">
-        <label><input type="checkbox" name="ingataku" value="1"> Ingat saya</label>
-    </div>
-    <button type="submit" name="login">Login</button>
-</form>
+        <h2>Login</h2>
+
+        <div class="input-box">
+          <span class="icon"><i class="fas fa-user"></i></span>
+          <input type="text" name="username" required />
+          <label>Username</label>
         </div>
 
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    </body>
+        <div class="input-box">
+          <span class="icon"><i class="fas fa-lock"></i></span>
+          <input type="password" name="password" required />
+          <label>Password</label>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="register-link">
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Particle.js script -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      // Particle.js config
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 3 },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: { enable: true, speed: 3 },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
 </html>

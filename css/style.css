@@ -356,7 +356,7 @@ contact .row .form .input-group input {
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.7rem;
-  color: #972c70
+  color: #972c70;
   background-color: var(--bg);
   cursor: pointer;
 }
